@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Музыкальный сайт</title>
+</head>
+<body>
+
+    <audio id="myMusic" src="wow.m4a" preload="auto"></audio>
+
+    <h1>Добро пожаловать!</h1>
+    <p>Нажмите кнопку, чтобы начать.</p>
+    
+    <button id="playButton">Включить музыку</button>
+
+    <script>
+        // Находим кнопку и аудио по их id
+        var playButton = document.getElementById('playButton');
+        var music = document.getElementById('myMusic');
+
+        // Добавляем "слушателя" событий:
+        // Ждем клика по кнопке
+        playButton.addEventListener('click', function() {
+            // Как только кликнули — запускаем музыку
+            music.play();
+            // (Можно еще и саму кнопку скрыть, если нужно)
+            playButton.style.display = 'none'; 
+        });
+    </script>
+
+</body>
+</html>
